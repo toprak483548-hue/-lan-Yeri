@@ -1,0 +1,43 @@
+
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101a32">
+  <meta name="description" content="İlan Yeri — Türkiye genelinde araç, emlak, elektronik ve daha fazlası için ilanları keşfet.">
+  <title>İlan Yeri — Aradığın şey, bir adım uzağında</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#home" data-route="home" aria-label="İlan Yeri ana sayfa">
+        <span class="brand-mark">İY</span><span class="brand-type">İlan Yeri<small>GÜVENLE KEŞFET</small></span>
+      </a>
+      <button class="mobile-menu" id="mobileMenu" type="button" aria-label="Menüyü aç" aria-expanded="false">☰</button>
+      <nav class="main-nav" id="mainNav" aria-label="Ana menü">
+        <a class="nav-link" href="#listings" data-route="listings">İlanları keşfet</a>
+        <a class="nav-link" href="#favorites" data-route="favorites">♡ Favorilerim</a>
+        <a class="account-link" id="accountNav" href="#account" data-route="account">♙ Hesabım</a>
+        <a class="nav-add" href="#create" data-route="create">＋ Ücretsiz ilan ver</a>
+      </nav>
+    </div>
+  </header>
+  <div id="setupBanner" class="setup-banner hidden" role="status"></div>
+  <main id="app" aria-live="polite"><div class="wrap loading-card">İlan Yeri hazırlanıyor…</div></main>
+  <footer class="site-footer">
+    <div class="wrap footer-main"><a class="brand" href="#home" data-route="home"><span class="brand-mark">İY</span><span class="brand-type">İlan Yeri<small>GÜVENLE KEŞFET</small></span></a><p>Aradığın şey, bir adım uzağında.</p><nav><a href="#privacy" data-route="privacy">Gizlilik</a><a href="#terms" data-route="terms">Kullanım koşulları</a></nav></div>
+    <div class="wrap footer-bottom"><span>© <span id="footerYear"></span> İlan Yeri</span><span>İlanları keşfet, kolayca paylaş.</span></div>
+  </footer>
+  <dialog id="siteDialog" class="site-dialog"><button id="dialogClose" class="dialog-x" type="button" aria-label="Kapat">×</button><div id="dialogContent"></div></dialog>
+  <div id="toastRegion" class="toast-region" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
